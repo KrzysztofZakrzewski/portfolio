@@ -6,7 +6,7 @@ A może zdecydujesz się na hodowlę.
 
 **Utworzono: 30.06.2025**
 
-<a href="iris.ipynb" class="md-button md-button--primary">Pobierz Notebook</a>
+<a href="iris.ipynb" download class="md-button md-button--primary">Pobierz Notebook</a>
 
 <iframe
     id="content"
