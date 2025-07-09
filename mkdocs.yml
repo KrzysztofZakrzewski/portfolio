@@ -1,7 +1,10 @@
 site_name: Krzysztof Zakrzewski Portfolio
 site_author: Krzysztof Zakrzewski
 site_description: >-
-    Portfolio moich wspaniałych projektów z Data Science i AI!
+    Portfolio projektów Krzysztofa Zakrzewskiego z Data Science i AI!
+
+repo_name: KrzysztofZakrzewsk/portfolio
+repo_url: https://github.com/KrzysztofZakrzewski/portfolio
 
 theme:
   name: material
