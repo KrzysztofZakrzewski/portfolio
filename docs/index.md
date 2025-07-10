@@ -1,6 +1,6 @@
 # Witam na moim portfolio
 
-Mój github [mkdocs.org](https://www.mkdocs.org).
+Mój github [https://github.com/KrzysztofZakrzewski](https://github.com/KrzysztofZakrzewski).
 
 ## It is About:
 Znajdują się tu przykładowe analizy eksploracyjne (EDA), projekty w Pythonie, zastosowania sztucznej inteligencji i uczenia maszynowego, a także niewielkie aplikacje.
