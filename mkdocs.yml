@@ -19,13 +19,17 @@ nav:
 - Analiza Danych:
 # - Projekty ukończone:
   - "Iris": iris/index.md
+  - "Titanic": titanic/index.md
   # - "aaa": aaa/index.md
   # - "Titanic": titanic/index.md
 - Projekty w przygotowaniu:
-  - "Titanic": titanic/index.md
+  - "W przygotowaniu": W_przygotowaniau/index.md
 
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - styles/extra.css
