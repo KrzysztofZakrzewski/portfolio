@@ -16,6 +16,8 @@
         <link rel="prev" href="../iris/">
       
       
+        <link rel="next" href="../W_przygotowaniau/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
@@ -48,6 +50,8 @@
       
     
     
+      <link rel="stylesheet" href="../styles/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -70,6 +74,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#analiza-danych-eda-dotyczaca-katastrofy-titanica-eksploracja-domenowa" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -240,18 +249,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -267,7 +278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Analiza Danych
@@ -297,6 +308,39 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Titanic
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -308,20 +352,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +379,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Projekty w przygotowaniu
@@ -348,28 +390,20 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../W_przygotowaniau/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Titanic
+    W przygotowaniu
     
   </span>
   
 
       </a>
-      
     </li>
   
 
@@ -399,6 +433,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -417,9 +453,32 @@
   
 
 
-  <h1>Titanic</h1>
-
-<p>W przygotowaniu</p>
+<h1 id="analiza-danych-eda-dotyczaca-katastrofy-titanica-eksploracja-domenowa">Analiza Danych EDA dotycząca katastrofy Titanica: Eksploracja Domenowa</h1>
+<p>Zapraszamy do zapoznania się z moim drógim projektem eksploracyjnej analizy danych EDA, dotyczący katastrofy Titanica. W tym projekcie oprócz samej analizy danych znajdóje się również kilka aspektów technicznych.</p>
+<p>Zapraszam</p>
+<p><strong>utworzono 28.08.2025</strong></p>
+<p><a href="titanic.ipynb" download class="md-button md-button--primary">Pobierz Notebook</a>
+<a href="26__titanic.csv" download class="md-button md-button--primary">Pobierz dane</a></p>
+<p><iframe
+    id="content"
+    src="titanic.html"
+    width="100%"
+    style="border:1px solid black;overflow:hidden;"
+></iframe></p>
+<script>
+function resizeIframeToFitContent(iframe) {
+    iframe.style.height = (iframe.contentWindow.document.documentElement.scrollHeight + 50) + "px";
+    iframe.contentDocument.body.style["overflow"] = 'hidden';
+}
+window.addEventListener('load', function() {
+    var iframe = document.getElementById('content');
+    resizeIframeToFitContent(iframe);
+});
+window.addEventListener('resize', function() {
+    var iframe = document.getElementById('content');
+    resizeIframeToFitContent(iframe);
+});
+</script>
 
 
 

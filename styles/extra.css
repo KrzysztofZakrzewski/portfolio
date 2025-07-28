@@ -1,0 +1,8 @@
+.md-grid {
+  max-width: 1600px;
+} 
+
+/* Tylko dla strony Titanic
+body.titanic__index .md-grid {
+  max-width: 1600px;
+} */
