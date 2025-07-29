@@ -24,6 +24,8 @@ nav:
   # - "Titanic": titanic/index.md
 - Projekty w przygotowaniu:
   - "W przygotowaniu": W_przygotowaniau/index.md
+- Aplikacje:
+  - "Type Machine": "typemachine/index.md"
 
 markdown_extensions:
   - attr_list

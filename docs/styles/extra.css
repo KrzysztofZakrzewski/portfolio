@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .md-grid {
   max-width: 1600px;
 } 
@@ -6,3 +10,7 @@
 body.titanic__index .md-grid {
   max-width: 1600px;
 } */
+
+.extra-space {
+  margin-top: 1em;
+}
