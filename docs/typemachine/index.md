@@ -1,25 +1,25 @@
-# Prosta Apka do generowałnia napisów: TypeMachine 📄🖋️
+# Simple app for generating texts: TypeMachine 📄🖋️
 
-### Opis
+### Description
 
-Wykorzystuje model "whisper-1" od OpenAI do generowania napisów z pliku mp3, wygererowanego z filmów.
-Ze względów technologicznych wielkość procesowanego filmu ogranicza się do 200MB.
+It uses OpenAI’s "whisper-1" model to generate subtitles from mp3 files extracted from videos.
+Due to technological limitations, the size of the processed video is limited to 200MB.
 
-Miłej zabawy. 🎠
+Have fun!. 🎠
 
-### Instrukcja:
-1. Wybierz docelowy język tłumaczenia, wpisując jego kod ISO.
-2. W polu „Wgraj plik wideo” załaduj wideo, z którego chcesz wyodrębnić tekst.
-3. Kliknij przycisk „Wygeneruj Audio” i sprawdź, czy dźwięk został poprawnie wygenerowany.
-4. Pojawi się wyodrębniony tekst z przesłanego wideo.
-5. Możesz edytować ten tekst, ale pamiętaj, aby nacisnąć CTRL+ENTER, aby zatwierdzić zmiany.
-6. Po kliknięciu przycisku „Pobierz transkrypcję jako plik .srt”, plik zostanie zapisany na Twoim dysku.
-7. Jeśli nie chcesz ściągać pliku od nieznanej osoby z internetu (co jest dobrą praktyką), możesz sokpiować wyekstrachowany tekst do notatnika.txt i zmienić roszerzenie na .srt.
+### Description:
+1. Select the target translation language by entering its ISO code
+2. In the “Upload video file” field, upload the video from which you want to extract text
+3. Click the “Generate Audio” button and check if the audio was generated correctly
+4. The extracted text from the uploaded video will appear
+5. You can edit this text, but remember to press CTRL+ENTER to confirm the changes
+6. After clicking the “Download transcription as .srt file” button, the file will be saved to your disk
+7. If you don’t want to download a file from an unknown internet source (which is a good practice), you can copy the extracted text to a notepad.txt file and then change its extension to .srt
 
 <a href="http://104.248.47.250:8501/" download class="md-button md-button--primary">Link do aplikacji</a>
 <a href="https://github.com/KrzysztofZakrzewski/typemachine/tree/srt" download class="md-button md-button--primary">GitHub</a>
 
-### Mini scpecyfikacja:
+### Mini spec:
 1. Python 3.11.11
 2. streamlit 1.42.0 py311haa95532_0
 3. streamlit-audiorecorder 0.0.6 pypi_0
@@ -29,7 +29,7 @@ Miłej zabawy. 🎠
 7. ffmpeg 6.1.1 hc79a5da_2 
 8. ffmpeg-python 0.2.0 pypi_0 pypi
 
-### Wygląd aplikacji
+### Appearance of the application
 ![screenshot_1](./media/typemachine_1.jpg)
 ![screenshot_1](./media/typemachine_2.jpg)
 

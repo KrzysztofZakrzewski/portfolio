@@ -1,13 +1,14 @@
-# Witam na moim portfolio
+# Hello and welcome to my portfolio.
 
-Mój github [https://github.com/KrzysztofZakrzewski](https://github.com/KrzysztofZakrzewski).
+My github [https://github.com/KrzysztofZakrzewski](https://github.com/KrzysztofZakrzewski).
 
 ## It is About:
-Znajdują się tu przykładowe analizy eksploracyjne (EDA), projekty w Pythonie, zastosowania sztucznej inteligencji i uczenia maszynowego, a także niewielkie aplikacje.
+This section contains exploratory data analyses (EDA), Python projects, applications of artificial intelligence and machine learning, as well as small-scale applications.
 
 ## About me:
-Zafascynowany światem technologii, nieustannie poszukuję wiedzy i inspiracji.
+I’m passionate about exploring the world of data and technology, constantly seeking new knowledge and inspiration. As an aspiring Data Scientist, I enjoy uncovering stories hidden within data through analysis and statistics.
 
-Fascynuje mnie rozwiązywanie problemów i odkrywanie historii ukrytych w danych. Moją pasją stała się analiza, statystyka i budowanie rozwiązań.<br>
-Oraz odkrywanie nowych technologi. One są jak puzle. Wystarczy edytor teksu, notebook...
+I’m proficient in Python and key data science libraries like Pandas, Matplotlib, and Seaborn. I regularly work with tools such as Jupyter Notebook, Anaconda, and VSCode to build and test solutions efficiently. Additionally, I’m taking my first steps in Linux, expanding my technical toolkit.
+
+Problem-solving and learning new technologies feel like solving puzzles to me — all it takes is a text editor, a jupyter notebook, and curiosity.
 

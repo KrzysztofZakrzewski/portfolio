@@ -1,1 +1,1 @@
-# Następne projetkty pojawią wkrótce ✍🏻
+# Next projects will appear soon. ✍🏻

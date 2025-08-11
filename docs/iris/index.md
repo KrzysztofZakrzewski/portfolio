@@ -1,12 +1,14 @@
-# Analiza Danych EDA Irysów: Eksploracja Domenowa
+# Data Analysis EDA of Irises: Domain Exploration
 
-Zapraszamy do zapoznania się z moim projektem, dotyczący klasyki eksploracyjnej analizy danych (EDA) czyli irysów. W tym projekcie znajdziesz mnóstwo trafnych wniosków i ciekawych obserwacji odnoścnie poszczególnych cech fizycznych tych kwiatów, które pozwalaną zdobyć wiedzę jak je odróżnić od siebie. Przygotuj się na fascynującą podróż przez dane, która z pewnością wzbogaci Twoją wiedzę i zainspiruje do dalszych badań.
+Welcome to explore my project on a classic exploratory data analysis (EDA) topic — the irises.
+In this project, you will find plenty of insightful conclusions and interesting observations regarding the physical features of these flowers, which will help you learn how to distinguish them from each other.
+Get ready for a fascinating journey through the data that will surely enrich your knowledge and inspire further research.
 
-A może zdecydujesz się na hodowlę.
+And maybe you’ll even decide to start growing them.
 
-**Utworzono: 30.06.2025**
+**Created 30.06.2025**
 
-<a href="iris.ipynb" download class="md-button md-button--primary">Pobierz Notebook</a>
+<a href="iris.ipynb" download class="md-button md-button--primary">Download Notebook</a>
 
 <iframe
     id="content"

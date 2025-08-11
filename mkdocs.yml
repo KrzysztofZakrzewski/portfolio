@@ -15,16 +15,16 @@ theme:
   logo: assets/logo.png
 
 nav:
-- Strona Domowa: index.md
-- Analiza Danych:
+- Home: index.md
+- Data Analys:
 # - Projekty ukończone:
   - "Iris": iris/index.md
   - "Titanic": titanic/index.md
   # - "aaa": aaa/index.md
   # - "Titanic": titanic/index.md
-- Projekty w przygotowaniu:
-  - "W przygotowaniu": W_przygotowaniau/index.md
-- Aplikacje:
+- Projects in progress:
+  - "In progrs": W_przygotowaniau/index.md
+- Applications:
   - "Type Machine": "typemachine/index.md"
 
 markdown_extensions:

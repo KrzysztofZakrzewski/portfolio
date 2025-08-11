@@ -1,13 +1,14 @@
-# Analiza Danych EDA dotycząca katastrofy Titanica: Eksploracja Domenowa
+# Data Analysis EDA related to the Titanic disaster: Domain Exploration
 
-Zapraszamy do zapoznania się z moim drógim projektem eksploracyjnej analizy danych EDA, dotyczący katastrofy Titanica. W tym projekcie oprócz samej analizy danych znajdóje się również kilka aspektów technicznych.
+Welcome to explore my second project of exploratory data analysis (EDA) related to the Titanic disaster.
+In this project, besides the data analysis itself, you will also find several technical aspects.
 
-Zapraszam
+Enjoy!
 
-**utworzono 28.08.2025**
+**Created on 28.08.2025**
 
-<a href="titanic.ipynb" download class="md-button md-button--primary">Pobierz Notebook</a>
-<a href="26__titanic.csv" download class="md-button md-button--primary">Pobierz dane</a>
+<a href="titanic.ipynb" download class="md-button md-button--primary">Download Notebook</a>
+<a href="26__titanic.csv" download class="md-button md-button--primary">Download CSV Data</a>
 
 <iframe
     id="content"
