@@ -1,18 +1,26 @@
-# Data Analysis EDA of Irises: Domain Exploration
+# Data Analysis EDA of Coffee: Domain Exploration
 
-Welcome to explore my project on a classic exploratory data analysis (EDA) topic — the irises.
-In this project, you will find plenty of insightful conclusions and interesting observations regarding the physical features of these flowers, which will help you learn how to distinguish them from each other.
-Get ready for a fascinating journey through the data that will surely enrich your knowledge and inspire further research.
+I present an EDA analysis based on coffee-related data.
 
-And maybe you’ll even decide to start growing them.
+My personal goal in this small project, besides performing the analysis itself, was to carry it out on a **Linux** system. The experience had its challenges, but it was not exceptionally difficult.
 
-**Created 30.06.2025**
+During this analysis, I explored the differences between time in Python and time in pandas. It can really give you a headache—time is not always equal to time.
 
-<a href="iris.ipynb" download class="md-button md-button--primary">Download Notebook</a>
+Additionally, I decided to answer the question of whether the data comes from the USA, by comparing the results with the expected sales increases or decreases.
+
+It turned out that the data is either synthetic or comes from another region of the world. Where exactly? I don’t know—maybe someday I’ll find the time to find out. 🙂
+
+Enjoy the ☕!
+
+**Created 09.09.2025**
+
+<a href="coffee_eda.ipynb" download class="md-button md-button--primary">Download Notebook</a>
+<a href="https://www.kaggle.com/datasets/navjotkaushal/coffee-sales-dataset" download class="md-button md-button--primary">Link to DataSet</a>
+<a href="https://www.kaggle.com/navjotkaushal" download class="md-button md-button--primary">Link to author of Data</a>
 
 <iframe
     id="content"
-    src="iris.html"
+    src="coffee_eda.html"
     width="100%"
     style="border:1px solid black;overflow:hidden;"
 ></iframe>

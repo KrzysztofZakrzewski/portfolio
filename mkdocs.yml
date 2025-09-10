@@ -21,6 +21,7 @@ nav:
   - "Iris": iris/index.md
   - "Titanic": titanic/index.md
   - "The 500 richest businessmen in the world": rich_500/index.md
+  - "Coffee": coffee/index.md
   # - "aaa": aaa/index.md
   # - "Titanic": titanic/index.md
 - Projects in progress:
