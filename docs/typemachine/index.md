@@ -16,7 +16,7 @@ Have fun!. 🎠
 6. After clicking the “Download transcription as .srt file” button, the file will be saved to your disk
 7. If you don’t want to download a file from an unknown internet source (which is a good practice), you can copy the extracted text to a notepad.txt file and then change its extension to .srt
 
-<a href="http://104.248.47.250:8501/" download class="md-button md-button--primary">Link do aplikacji</a>
+<a href="https://typemachine.site/" download class="md-button md-button--primary">Link to app</a>
 <a href="https://github.com/KrzysztofZakrzewski/typemachine/tree/srt" download class="md-button md-button--primary">GitHub</a>
 
 ### Mini spec:
