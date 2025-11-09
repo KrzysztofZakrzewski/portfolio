@@ -28,6 +28,7 @@ nav:
   - "In progrs": W_przygotowaniau/index.md
 - Applications:
   - "Type Machine": "typemachine/index.md"
+  - "M_Cal": "M_Cal"
 
 markdown_extensions:
   - attr_list
