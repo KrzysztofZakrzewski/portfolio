@@ -30,7 +30,7 @@ The application also creates a kind of database, allowing users to save and uplo
 
 The application also retrieves a PDF containing the nutritional values table from McDonald's Poland. It processes the PDF and creates a usable calorie table in JSON format.
 
-<a href="https://www.youtube.com/watch?v=pYh9ikkH-pY&list=PLa5Nkstmmxb-cLDqtOdl3WF-ANgqo-OY0&index=2" download class="md-button md-button--primary">Pervormeance VIdeo</a>
+<a href="https://www.youtube.com/watch?v=pYh9ikkH-pY&list=PLa5Nkstmmxb-cLDqtOdl3WF-ANgqo-OY0&index=2" download class="md-button md-button--primary">Pervormeance Video</a>
 <a href="https://www.youtube.com/watch?v=3tf_qaObctA&list=PLa5Nkstmmxb-cLDqtOdl3WF-ANgqo-OY0&index=1t" download class="md-button md-button--primary">Tech Video</a>
 <a href="https://github.com/KrzysztofZakrzewski/m_cal" download class="md-button md-button--primary">GitHub</a>
 
