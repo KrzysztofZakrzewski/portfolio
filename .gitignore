@@ -1,2 +1,6 @@
 site/
 html_maker/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
