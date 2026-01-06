@@ -21,6 +21,8 @@ Due to technological limitations, the size of the processed video is limited to 
 
 🚀 Installation & Setup 1️⃣ Clone the repository git clone https://github.com/your-username/typemachine.git cd typemachine
 
+Switch to branch v2-lang-modules: **git checkout v2-lang-modules** 
+
 2️⃣ Create Conda environment (Make sure you have Conda installed (Anaconda or Miniconda)).
 
 conda env create -f environment.yml
