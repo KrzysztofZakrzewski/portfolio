@@ -653,10 +653,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description_1" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description:
+        ✨ Features
       
     </span>
   </a>
@@ -664,10 +664,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mini-spec" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mini spec:
+        Quick start
       
     </span>
   </a>
@@ -675,13 +675,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#appearance-of-the-application" class="md-nav__link">
+  <a href="#instructions-of-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Appearance of the application
+        Instructions of use:
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        quick-spec:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="quick-spec:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-version-build-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name Version Build Channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#also-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Also in use:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -767,10 +806,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description_1" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description:
+        ✨ Features
       
     </span>
   </a>
@@ -778,10 +817,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mini-spec" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mini spec:
+        Quick start
       
     </span>
   </a>
@@ -789,13 +828,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#appearance-of-the-application" class="md-nav__link">
+  <a href="#instructions-of-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Appearance of the application
+        Instructions of use:
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        quick-spec:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="quick-spec:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-version-build-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name Version Build Channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#also-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Also in use:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -821,19 +899,86 @@
 
 <h1 id="simple-app-for-generating-texts-typemachine">Simple app for generating texts: TypeMachine 📄🖋️</h1>
 <h3 id="description">Description</h3>
-<p>It uses OpenAI’s "whisper-1" model to generate subtitles from mp3 files extracted from videos.
-Due to technological limitations, the size of the processed video is limited to 200MB.</p>
-<p>Have fun!. 🎠</p>
-<h3 id="description_1">Description:</h3>
+<p>Typemachine is a Streamlit-based application for generating subtitles from short video files.</p>
+<p>The app extracts audio from a video, transcribes speech to text using OpenAI, allows basic text editing, translates the transcript into a selected language, and exports subtitles in SRT format.</p>
+<p>Due to technological limitations, the size of the processed video is limited to 200MB.</p>
+<h3 id="features">✨ Features</h3>
+<ul>
+<li>Upload short video files</li>
+<li>Extract audio using ffmpeg</li>
+<li>Speech-to-text transcription (OpenAI)</li>
+<li>Editable transcript</li>
+<li>Translation into a target language</li>
+<li>Export original and translated subtitles as .srt</li>
+</ul>
+<h3 id="quick-start">Quick start</h3>
+<p>🚀 Installation &amp; Setup 1️⃣ Clone the repository git clone https://github.com/your-username/typemachine.git cd typemachine</p>
+<p>2️⃣ Create Conda environment (Make sure you have Conda installed (Anaconda or Miniconda)).</p>
+<p>conda env create -f environment.yml</p>
+<pre><code>Activate the environment:
+</code></pre>
+<p>conda activate typemachine</p>
+<p>3️⃣ Environment variables</p>
+<p>Create a .env file in the project root directory:</p>
+<p>OPENAI_API_KEY=your_openai_api_key_here</p>
+<p>If not type the openai key in start of applicatin</p>
+<p>4️⃣ Run the application streamlit run app/main.py</p>
+<p>The application will be available at:</p>
+<p>http://localhost:8501</p>
+<h3 id="instructions-of-use">Instructions of use:</h3>
+<p>After entering your OpenAI key, you (the user) can:</p>
 <ol>
-<li>Select the target translation language by entering its ISO code</li>
-<li>In the “Upload video file” field, upload the video from which you want to extract text</li>
-<li>Click the “Generate Audio” button and check if the audio was generated correctly</li>
-<li>The extracted text from the uploaded video will appear</li>
-<li>You can edit this text, but remember to press CTRL+ENTER to confirm the changes</li>
-<li>After clicking the “Download transcription as .srt file” button, the file will be saved to your disk</li>
-<li>If you don’t want to download a file from an unknown internet source (which is a good practice), you can copy the extracted text to a notepad.txt file and then change its extension to .srt</li>
+<li>In the "Upload Video" field, upload the video from which you want to extract text.</li>
+<li>Then press the "Generate Audio" button and check if the audio was generated correctly.</li>
+<li>Next, press the "Audio Transcription" button — the text from the uploaded video will appear.</li>
+<li>You can modify it, but remember to press CTRL + ENTER to confirm your changes.</li>
+<li>Enter the language you want to translate the script into (by default, it will be Polish).</li>
+<li>Press the "Translate" button to generate a translation in SRT file format.</li>
+<li>The translated text can also be modified and confirmed with CTRL + ENTER.</li>
+<li>You can download both the translated version and the original.</li>
 </ol>
+<p>🔄 Application Flow</p>
+<pre><code>A[Upload Video] --&gt; B[Extract Audio (ffmpeg)]
+B --&gt; C[Generate Audio File]
+C --&gt; D[Audio Transcription (OpenAI)]
+D --&gt; E[Editable Transcript]
+E --&gt; F[Translation]
+F --&gt; G[Editable Tranlated Transcript]
+G --&gt; H[SRT File Output]
+</code></pre>
+<h3 id="quick-spec">quick-spec:</h3>
+<p>Python 3.11.11</p>
+<h4 id="name-version-build-channel">Name Version Build Channel</h4>
+<ol>
+<li>streamlit 1.42.0 py311haa95532_0</li>
+<li>streamlit-audiorecorder 0.0.6 pypi_0 pypi</li>
+<li>pydub 0.25.1 pyhd8ed1ab_1 conda-forge</li>
+<li>python-dotenv 0.21.0 py311haa95532_0</li>
+<li>openai 2.14.0 pyhd8ed1ab_0 conda-forge</li>
+<li>ffmpeg 6.1.1 hc79a5da_2</li>
+<li>ffmpeg-python 0.2.0 pypi_0 pypi</li>
+</ol>
+<h4 id="also-in-use">Also in use:</h4>
+<p>io,
+BytesIO,
+hashlib,
+md5
+os</p>
+<h1 id="project-structure">Project Structure</h1>
+<p>=================</p>
+<pre><code>app/
+│
+├── ai/
+│   └── transcrible.py  --&gt; all function needed for recognition the langue of text, transcrible and translate of text
+│
+├── audio/
+│   └── extract.py  --&gt; function needed for extract mp3 format from Video
+│
+├── config/
+│   └── settings.py  --&gt; hardcode the AI model used in project
+│
+└── main.py  --&gt; main code of the app.
+</code></pre>
 <p><a href="https://typemachine.site/" download class="md-button md-button--primary">Link to app</a>
 <a href="https://github.com/KrzysztofZakrzewski/typemachine/tree/srt" download class="md-button md-button--primary">GitHub</a></p>
 <h3 id="mini-spec">Mini spec:</h3>
@@ -849,7 +994,8 @@ Due to technological limitations, the size of the processed video is limited to 
 </ol>
 <h3 id="appearance-of-the-application">Appearance of the application</h3>
 <p><img alt="screenshot_1" src="media/typemachine_1.jpg" />
-<img alt="screenshot_1" src="media/typemachine_2.jpg" /></p>
+<img alt="screenshot_2" src="media/typemachine_2.jpg" />
+<img alt="screenshot_3" src="media/typemachine_3.jpg" /></p>
 <script>
 function resizeIframeToFitContent(iframe) {
     iframe.style.height = (iframe.contentWindow.document.documentElement.scrollHeight + 50) + "px";
