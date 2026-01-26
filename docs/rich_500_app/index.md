@@ -25,6 +25,50 @@ This is also the first application I have deployed to a production environment o
 
 ![screenshot](media/the500.png)
 
+### Architecture
+
+```
+app/
+│
+├── app.py                  # entry point (Streamlit)
+│
+├── loader/
+│   └── csv_loader.py           # load danych
+|
+├── data/
+│   └──top_rich2024_ready.csv   # csv data
+|
+├── analysis/
+│   ├── data_overwview.py       # universal compiuting for basic data overview
+│   ├── statistics_for_countries.py # descriptive statistics for countrys analysis
+│   └── statistics_for_global.py    # descriptive statistics for global analysis
+│
+│
+├── visualization/
+│   ├── plots.py            # plots for global analysis
+│   └── plots_countrys.py   # plots for countrys analysis
+│
+├── ui/
+│   ├── components          # sidebar global an countrys
+|   |   └── data_overview.py  # render universal view for basic data overview
+|   |
+│   ├── sidebar.py          # sidebar uniwersal for all        
+│   ├── components.py          # sidebar uniwersal for all        
+|   |   |
+|   |   └── data_overview.py   # basic overview for global and coutrys analysis
+|   |
+│   ├── pages.py/           # page/tab logic
+│   |   |
+│   |   ├── about.py        # Descryption of app
+|   |   ├── global_analis.py    # global analysis
+│   |   ├── about.py        # Descryption of app
+|   |   └── countrys.py     # anasysis for countrys
+|   |
+|   └──styles.py            # Css style for all app
+|
+│
+└── requirements.txt
+```
 
 **Created 20.01.2026**
 
