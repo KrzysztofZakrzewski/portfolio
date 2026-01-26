@@ -32,8 +32,8 @@ I am providing both the original dataset and the version modified by me for anal
 
 Author of orginal dataset:
 
-<a href="https://www.kaggle.com/mahmoudredagamail/datasets" download class="md-button md-button--primary">Dowland Orginal Dataset</a> 
-<a href="https://www.kaggle.com/datasets/mahmoudredagamail/the-worlds-500-most-powerful-businessmen" download class="md-button md-button--primary">Author of dataset</a>
+<a href="https://www.kaggle.com/mahmoudredagamail/datasets" download class="md-button md-button--primary">Author of dataset</a> 
+<a href="https://www.kaggle.com/datasets/mahmoudredagamail/the-worlds-500-most-powerful-businessmen" download class="md-button md-button--primary">Orginal Dataset</a>
 
 
 

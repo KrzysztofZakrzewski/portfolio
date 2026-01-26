@@ -35,6 +35,7 @@ nav:
 - Applications:
   - "Type Machine": "typemachine/index.md"
   - "M_Cal": "M_Cal/index.md"
+  - "rich_500_app": "rich_500_app/index.md"
 
 markdown_extensions:
   - attr_list
