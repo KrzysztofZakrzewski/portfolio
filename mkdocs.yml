@@ -1,3 +1,8 @@
+#=============
+# Change port beacause of Portainer !!!
+dev_addr: 127.0.0.1:8001
+#=============
+
 site_name: Krzysztof Zakrzewski Portfolio
 site_author: Krzysztof Zakrzewski
 site_description: >-
@@ -29,7 +34,7 @@ nav:
   - "In progrs": W_przygotowaniau/index.md
 - Applications:
   - "Type Machine": "typemachine/index.md"
-  - "M_Cal": "M_Cal"
+  - "M_Cal": "M_Cal/index.md"
 
 markdown_extensions:
   - attr_list
