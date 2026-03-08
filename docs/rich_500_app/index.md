@@ -73,6 +73,7 @@ app/
 **Created 20.01.2026**
 
 <a href="https://ritchproject.com/" download class="md-button md-button--primary">App link</a>
+<a href="https://github.com/KrzysztofZakrzewski/the_500_richest" download class="md-button md-button--primary">GitHub</a>
 
 All changes were implemented based on the original dataset without altering their values or substantive content.
 
