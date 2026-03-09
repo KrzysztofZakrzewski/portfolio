@@ -79,7 +79,7 @@ A characteristic element of his style was intelligent humor, grotesque imagery, 
 
 To this day he remains one of the most important and original figures in world science fiction literature, and his works continue to inspire scientists, philosophers, programmers and artists around the globe.
 
-**Created 20.01.2026**
+**Created 8.03.2026**
 
 <script>
 function resizeIframeToFitContent(iframe) {
