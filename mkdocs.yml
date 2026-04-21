@@ -30,6 +30,8 @@ nav:
   - "Job_offer_from_JustJoinIT": Job_offer_from_JustJoinIT/index.md
   # - "aaa": aaa/index.md
   # - "Titanic": titanic/index.md
+- ML:
+  - coffee clustering: "coffee_ml/index.md"
 - Projects in progress:
   - "In progrs": W_przygotowaniau/index.md
 - Applications:
