@@ -33,6 +33,7 @@ nav:
   # - "Titanic": titanic/index.md
 - ML:
   - coffee clustering: "coffee_ml/index.md"
+  - Telco_Customer_clasyfication: "Telco_Customer_clasyfication_ML/index.md"
 - Projects in progress:
   - "In progrs": W_przygotowaniau/index.md
 - Applications:
