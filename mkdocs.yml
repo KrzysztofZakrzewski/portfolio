@@ -28,6 +28,7 @@ nav:
   - "The 500 richest businessmen in the world": rich_500/index.md
   - "Coffee": coffee/index.md
   - "Job_offer_from_JustJoinIT": Job_offer_from_JustJoinIT/index.md
+  - "Telco_Customer_clasyfication_EDA": Telco_Customer_clasyfication_EDA/index.md
   # - "aaa": aaa/index.md
   # - "Titanic": titanic/index.md
 - ML:
