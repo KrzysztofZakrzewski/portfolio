@@ -550,10 +550,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📊 Customer Churn Prediction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#approach" class="md-nav__link">
     <span class="md-ellipsis">
       🔧 Approach
@@ -561,8 +560,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#results" class="md-nav__link">
     <span class="md-ellipsis">
       📈 Results
@@ -570,17 +569,17 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#key-insight" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#key-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      💡 Key Insight
+      💡 Key Insights
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#focus" class="md-nav__link">
     <span class="md-ellipsis">
       🔍 Focus
@@ -588,18 +587,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#learning-outcome" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Learning Outcome
+      🧠 Learning Outcomes
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -855,10 +849,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📊 Customer Churn Prediction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#approach" class="md-nav__link">
     <span class="md-ellipsis">
       🔧 Approach
@@ -866,8 +859,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#results" class="md-nav__link">
     <span class="md-ellipsis">
       📈 Results
@@ -875,17 +868,17 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#key-insight" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#key-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      💡 Key Insight
+      💡 Key Insights
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#focus" class="md-nav__link">
     <span class="md-ellipsis">
       🔍 Focus
@@ -893,18 +886,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#learning-outcome" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Learning Outcome
+      🧠 Learning Outcomes
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -930,32 +918,45 @@
   <h1>Telco_Customer_clasyfication</h1>
 
 <h2 id="customer-churn-prediction">📊 Customer Churn Prediction</h2>
-<p>Built an end-to-end machine learning model to predict customer churn in a telecom dataset.</p>
-<h3 id="approach">🔧 Approach</h3>
+<p>Built and compared two end-to-end machine learning models — Logistic Regression and Gradient Boosting — for customer churn prediction in a telecom dataset, focusing on both interpretability and predictive performance.</p>
+<h2 id="approach">🔧 Approach</h2>
 <ul>
 <li>Logistic Regression with L1 regularization</li>
+<li>Gradient Boosting Classifier</li>
 <li>Threshold tuning to balance recall and precision</li>
-<li>Feature importance analysis for interpretability</li>
+<li>Feature importance analysis and feature reduction experiments</li>
+<li>Cross-validation for model stability evaluation</li>
 </ul>
-<h3 id="results">📈 Results</h3>
+<h2 id="results">📈 Results</h2>
+<p>Logistic Regression (L1)</p>
 <ul>
-<li>ROC AUC: <strong>0.86</strong></li>
-<li>Recall (churn): <strong>0.68</strong></li>
-<li>Precision (churn): <strong>0.61</strong></li>
+<li>ROC AUC: ~0.85</li>
+<li>Recall (churn): ~0.68</li>
+<li>Precision (churn): ~0.61</li>
 </ul>
-<h3 id="key-insight">💡 Key Insight</h3>
-<p>Customers with short tenure and high monthly charges are significantly more likely to churn.</p>
-<h3 id="focus">🔍 Focus</h3>
-<p>Interpretability and real-world usability over raw accuracy.</p>
-<h3 id="learning-outcome">🧠 Learning Outcome</h3>
-<p>While tools like PyCaret are useful for quick model comparison, building the pipeline manually provided a deeper understanding of:</p>
+<p>Gradient Boosting</p>
 <ul>
-<li>feature engineering  </li>
-<li>threshold tuning  </li>
-<li>model interpretability  </li>
-<li>trade-offs between recall and precision  </li>
+<li>ROC AUC: ~0.86</li>
+<li>Recall (churn): ~0.68</li>
+<li>Precision (churn): ~0.64</li>
 </ul>
-<p>This allowed for more control over model behavior and better alignment with business objectives.</p>
+<h2 id="key-insights">💡 Key Insights</h2>
+<p>Customers with short tenure and month-to-month contracts were significantly more likely to churn.
+Gradient Boosting improved the balance between recall and precision while maintaining strong generalization performance.
+Removing low-importance features had minimal impact on results, suggesting effective handling of weak predictors by the ensemble model.</p>
+<h2 id="focus">🔍 Focus</h2>
+<p>Balancing interpretability, predictive performance, and real-world business usability rather than optimizing for raw accuracy alone.</p>
+<h2 id="learning-outcomes">🧠 Learning Outcomes</h2>
+<p>While tools like PyCaret were useful for rapid experimentation and model comparison, manually building and tuning the pipeline provided a much deeper understanding of:</p>
+<ul>
+<li>feature engineering</li>
+<li>threshold optimization</li>
+<li>ROC AUC interpretation</li>
+<li>business-oriented model evaluation</li>
+<li>ensemble learning and boosting</li>
+<li>trade-offs between recall and precision</li>
+</ul>
+<p>This approach provided greater control over model behavior and allowed the final solution to better align with practical business objectives.</p>
 <p><strong>Created on 03.05.2026</strong></p>
 <p><a href="https://www.kaggle.com/code/emineyetm/telco-customer-churn/input" class="md-button md-button--primary">Ogrinal data set</a>
 <a href="https://www.kaggle.com/emineyetm" class="md-button md-button--primary">Author of dataset</a>
@@ -965,7 +966,8 @@
 <br>
 <a href="Telco_Customer_clasyfication_ML.ipynb" download class="md-button md-button--primary">Download Notebook</a>
 <a href="data/telco_churn_clean.csv" download class="md-button md-button--primary">Download CSV Data</a>
-<a href="clasyfication_model/churn_model_final.pkl" download class="md-button md-button--primary">Download Final Model</a></p>
+<a href="clasyfication_model/churn_model_final.pkl" download class="md-button md-button--primary">Download LR Model</a>
+<a href="clasyfication_model/gradient_boosting_model.pkl" download class="md-button md-button--primary">Download GB Model</a></p>
 <p><iframe
     id="content"
     src="Telco_Customer_clasyfication_ML.html"
