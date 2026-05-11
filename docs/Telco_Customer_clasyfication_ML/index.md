@@ -1,33 +1,51 @@
 ## 📊 Customer Churn Prediction
 
-Built an end-to-end machine learning model to predict customer churn in a telecom dataset.
+Built and compared two end-to-end machine learning models — Logistic Regression and Gradient Boosting — for customer churn prediction in a telecom dataset, focusing on both interpretability and predictive performance.
 
-### 🔧 Approach
+## 🔧 Approach
+
 - Logistic Regression with L1 regularization
+- Gradient Boosting Classifier
 - Threshold tuning to balance recall and precision
-- Feature importance analysis for interpretability
+- Feature importance analysis and feature reduction experiments
+- Cross-validation for model stability evaluation
 
-### 📈 Results
-- ROC AUC: **0.86**
-- Recall (churn): **0.68**
-- Precision (churn): **0.61**
+## 📈 Results
 
-### 💡 Key Insight
-Customers with short tenure and high monthly charges are significantly more likely to churn.
+Logistic Regression (L1)
 
-### 🔍 Focus
-Interpretability and real-world usability over raw accuracy.
+- ROC AUC: ~0.85
+- Recall (churn): ~0.68
+- Precision (churn): ~0.61
 
-### 🧠 Learning Outcome
+Gradient Boosting
 
-While tools like PyCaret are useful for quick model comparison, building the pipeline manually provided a deeper understanding of:
+- ROC AUC: ~0.86
+- Recall (churn): ~0.68
+- Precision (churn): ~0.64
 
-- feature engineering  
-- threshold tuning  
-- model interpretability  
-- trade-offs between recall and precision  
+## 💡 Key Insights
 
-This allowed for more control over model behavior and better alignment with business objectives.
+Customers with short tenure and month-to-month contracts were significantly more likely to churn.
+Gradient Boosting improved the balance between recall and precision while maintaining strong generalization performance.
+Removing low-importance features had minimal impact on results, suggesting effective handling of weak predictors by the ensemble model.
+
+## 🔍 Focus
+
+Balancing interpretability, predictive performance, and real-world business usability rather than optimizing for raw accuracy alone.
+
+## 🧠 Learning Outcomes
+
+While tools like PyCaret were useful for rapid experimentation and model comparison, manually building and tuning the pipeline provided a much deeper understanding of:
+
+- feature engineering
+- threshold optimization
+- ROC AUC interpretation
+- business-oriented model evaluation
+- ensemble learning and boosting
+- trade-offs between recall and precision
+
+This approach provided greater control over model behavior and allowed the final solution to better align with practical business objectives.
 
 **Created on 03.05.2026**
 
@@ -39,7 +57,8 @@ This allowed for more control over model behavior and better alignment with busi
 <br>
 <a href="Telco_Customer_clasyfication_ML.ipynb" download class="md-button md-button--primary">Download Notebook</a>
 <a href="data/telco_churn_clean.csv" download class="md-button md-button--primary">Download CSV Data</a>
-<a href="clasyfication_model/churn_model_final.pkl" download class="md-button md-button--primary">Download Final Model</a>
+<a href="clasyfication_model/churn_model_final.pkl" download class="md-button md-button--primary">Download LR Model</a>
+<a href="clasyfication_model/gradient_boosting_model.pkl" download class="md-button md-button--primary">Download GB Model</a>
 
 <iframe
     id="content"
