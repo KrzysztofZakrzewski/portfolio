@@ -47,6 +47,19 @@ While tools like PyCaret were useful for rapid experimentation and model compari
 
 This approach provided greater control over model behavior and allowed the final solution to better align with practical business objectives.
 
+🧪 Interactive Playground
+
+The notebook includes a commented testing section that allows running predictions on custom customer profiles.
+
+This makes it possible to:
+
+- modify customer attributes
+- compare Logistic Regression and Gradient Boosting predictions
+- observe probability changes
+- experiment with different churn scenarios
+
+The playground was designed to better understand how model behavior changes depending on customer characteristics and classification thresholds.
+
 **Created on 03.05.2026**
 
 <a href="https://www.kaggle.com/code/emineyetm/telco-customer-churn/input" class="md-button md-button--primary">Ogrinal data set</a>
