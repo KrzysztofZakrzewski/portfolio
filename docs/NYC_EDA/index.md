@@ -57,7 +57,7 @@ After downloading, place the dataset inside the project's `data/` directory befo
 
 <a href="https://www.linkedin.com/in/krzysztof-zakrzewski-206554258/" class="md-button md-button--primary">My linkedin</a>
 
-<a href="https://github.com/KrzysztofZakrzewski/NYC_Taxi_Trip_Duration_ML" class="md-button md-button--primary">Project GitHub</a>
+<a href="https://github.com/KrzysztofZakrzewski/NYC_Taxi_Trip_Duration_EDA" class="md-button md-button--primary">Project GitHub</a>
 
 
 <iframe
