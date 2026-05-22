@@ -58,8 +58,8 @@ flowchart TD
     H --> I[Translate UI and descriptions to selected language]
 ```
 
-<a href="https://shark-app-2xv8i.ondigitalocean.app/" download class="md-button md-button--primary">Web App link</a>
-<a href="https://github.com/KrzysztofZakrzewski/lembrary" download class="md-button md-button--primary">GitHub (main- local)</a>
+<a href="https://lemlibrary.uk/" class="md-button md-button--primary">Web App link</a>
+<a href="https://github.com/KrzysztofZakrzewski/lembrary" class="md-button md-button--primary">GitHub (main- local)</a>
 
 ## Stanisław Lem
 
