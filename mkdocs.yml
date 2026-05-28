@@ -43,6 +43,7 @@ nav:
   - "M_Cal": "M_Cal/index.md"
   - "rich_500_app": "rich_500_app/index.md"
   - "Lemlibrary": "lemlibrary/index.md"
+  - "NYC Taxi Trip Duration": "NYC_Taxi_app/index.md"
 
 markdown_extensions:
   - attr_list
