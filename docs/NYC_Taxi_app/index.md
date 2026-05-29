@@ -34,7 +34,7 @@ The application was developed as the deployment and demonstration layer for the 
 
 - Please refer to the project README for setup and execution instructions.
 
-**Created on 22.05.2026**
+**Created on 28.05.2026**
 
 <a href="https://www.linkedin.com/in/krzysztof-zakrzewski-206554258/" class="md-button md-button--primary">LinkedIn Profile</a>
 
