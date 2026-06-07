@@ -1,14 +1,27 @@
-# Hello and welcome to my portfolio.
+# 👋 Hello and welcome to my portfolio
 
-My github [https://github.com/KrzysztofZakrzewski](https://github.com/KrzysztofZakrzewski).
+<a href="https://github.com/KrzysztofZakrzewski" target="_blank" class="md-button md-button--primary">My GitHub</a>
 
-## It is About:
-This section contains exploratory data analyses (EDA), Python projects, applications of artificial intelligence and machine learning, as well as small-scale applications.
+## 📂 About this portfolio
 
-## About me:
-I’m passionate about exploring the world of data and technology, constantly seeking new knowledge and inspiration. As an aspiring Data Scientist, I enjoy uncovering stories hidden within data through analysis and statistics.
+This portfolio contains projects related to data analysis, machine learning, artificial intelligence, and software development.
 
-I’m proficient in Python and key data science libraries like Pandas, Matplotlib, and Seaborn. I regularly work with tools such as Jupyter Notebook, Anaconda, and VSCode to build and test solutions efficiently. Additionally, I’m taking my first steps in Linux, expanding my technical toolkit.
+The projects cover the complete workflow from exploratory data analysis (EDA) and predictive modeling to interactive applications built with AI technologies. They include semantic search systems, OCR and document processing solutions, speech-to-text applications, machine learning models, and business-oriented data analysis projects.
 
-Problem-solving and learning new technologies feel like solving puzzles to me — all it takes is a text editor, a jupyter notebook, and curiosity.
+## 👨‍💻 About me
 
+I am a Junior Data Scientist and AI Developer focused on building practical solutions using data, machine learning, and modern AI tools.
+
+My experience comes primarily from personal projects involving data analysis, predictive modeling, semantic search with embeddings, OCR pipelines, ETL processes, vector databases, and applications powered by large language models (LLMs).
+
+I enjoy turning ideas into working applications and exploring how data and AI can be used to automate processes, extract information, and solve real-world problems.
+
+## 🛠 Main areas
+
+* Data Analysis & EDA
+* Machine Learning
+* OCR & Document Processing
+* LLM Applications
+* Semantic Search & Embeddings
+* Vector Databases (Qdrant)
+* Streamlit Applications
