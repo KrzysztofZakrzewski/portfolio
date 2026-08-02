@@ -1,28 +1,122 @@
-# 📦 Invoice OCR Inventory Scanner
+# 📦 Inventory OCR Scanner
 
-A modular inventory management application that automatically extracts products and quantities from invoice or order images using OCR and updates warehouse stock levels.
+A modular OCR-based inventory management system built with Python and Streamlit.
 
-The system was designed to process photographed documents, transform unstructured text into structured inventory data, and maintain product quantities in a database.
+The application automatically extracts products and quantities from invoice or warehouse document images using Optical Character Recognition (OCR), transforms unstructured text into structured inventory data, matches recognized products against a reference catalog, and synchronizes warehouse stock levels.
 
----
-
-## 🚀 Project Overview
-
-The application allows users to upload invoice or order images, extract product information using OCR, match extracted product names against a predefined product catalog, and update inventory records automatically.
-
-The architecture follows a modular design, making it easy to replace individual components without affecting the rest of the system.
-
-For example:
-
-* Tesseract OCR can be replaced with an LLM-based extraction engine.
-* SQLite can be replaced with PostgreSQL.
-* The current matching engine can be replaced with more advanced NLP solutions.
+The project was designed with a modular architecture so that individual components can be easily maintained, extended, or replaced.
 
 ---
 
-## 🏗️ Architecture
+# 🚀 Project Overview
 
-The application is divided into independent layers:
+The application automates inventory updates from photographed documents.
+
+Instead of manually entering products into a warehouse system, the application performs the following steps:
+
+* preprocesses uploaded images
+* extracts text using OCR
+* cleans and normalizes OCR output
+* identifies products and quantities
+* matches extracted names against a reference database using fuzzy matching
+* transforms extracted data into structured inventory records
+* updates inventory quantities stored in SQLite
+* presents the results through a Streamlit user interface
+
+The architecture separates business logic, OCR processing, ETL, data persistence, and user interface into independent modules.
+
+---
+
+# ✨ Features
+
+* OCR-based product extraction
+* Image preprocessing with OpenCV
+* Text extraction using Tesseract OCR
+* OCR text normalization and cleanup
+* Fuzzy product name matching using RapidFuzz
+* ETL pipeline for structured inventory data
+* Automatic inventory synchronization
+* SQLite-based persistence layer
+* Modular application architecture
+* Streamlit web interface
+
+---
+
+# 🏗 Architecture
+
+```text
+                Streamlit UI
+                      │
+                      ▼
+            OCR Processing Pipeline
+                      │
+                      ▼
+          Text Cleaning & Parsing
+                      │
+                      ▼
+               ETL Processing
+                      │
+                      ▼
+           Product Name Matching
+                      │
+                      ▼
+            Inventory Service Layer
+                      │
+                      ▼
+               SQLite Database
+```
+
+Each layer is responsible for a single part of the application, making the project easier to maintain and extend.
+
+---
+
+# 📂 Project Structure
+
+```text
+.
+├── app.py
+├── README.md
+│
+└── src
+    ├── auth
+    │   ├── auth.py
+    │   ├── password.py
+    │   └── session.py
+    │
+    ├── config
+    │   └── config.py
+    │
+    ├── database
+    │   ├── connection.py
+    │   ├── inventory_operations.py
+    │   ├── inventory_schema.py
+    │   ├── reference_schema.py
+    │   └── users_schema.py
+    │
+    ├── etl
+    │   ├── etl_pipeline.py
+    │   └── ocr_results_to_products_dataframe.py
+    │
+    ├── procesing_jpg
+    │   ├── extract_text_ocr.py
+    │   ├── invoice_ocr_pipeline.py
+    │   ├── preprocess_ocr.py
+    │   └── text_modification.py
+    │
+    ├── product_matching
+    │   └── fuzzy_match.py
+    │
+    ├── services
+    │   └── inventory_service.py
+    │
+    └── ui
+        ├── sidebar.py
+        └── upload.py
+```
+
+---
+
+# ⚙ Processing Workflow
 
 ```text
 Image Upload
@@ -31,233 +125,168 @@ Image Upload
 Image Preprocessing
       │
       ▼
-OCR Extraction
+OCR Text Extraction
       │
       ▼
 Text Cleaning
       │
       ▼
+Invoice Parsing
+      │
+      ▼
+ETL Transformation
+      │
+      ▼
 Product Matching
       │
       ▼
-ETL Processing
+Inventory Update
       │
       ▼
-Database Update
+SQLite Database
       │
       ▼
-User Interface
-```
-
-This separation allows each component to be developed, tested, and replaced independently.
-
----
-
-## 📂 Project Structure
-
-```text
-.
-├── src
-│   ├── config
-│   │   └── config.py
-│   │
-│   ├── database
-│   │   ├── baza_probna.db
-│   │   ├── connection.py
-│   │   ├── operations.py
-│   │   └── schema.py
-│   │
-│   ├── etl
-│   │   ├── pipeline.py
-│   │   ├── products_etl_ocr.py
-│   │   └── products_etl.py
-│   │
-│   ├── procesing_jpg
-│   │   ├── extract_text_ocr.py
-│   │   ├── preprocess_ocr.py
-│   │   └── text_modification.py
-│   │
-│   ├── product_matching
-│   │   ├── correct_products_names.py
-│   │   └── fuzzy_match.py
-│   │
-│   └── ui
-│       └── sidebar.py
-│
-├── app.py
-└── README.md
+Streamlit Interface
 ```
 
 ---
 
-## ⚙️ Modules
+# 📦 Module Overview
 
-### 🖥️ app.py
+### UI
 
-Main Streamlit application responsible for:
+Provides the Streamlit user interface responsible for:
 
-* image upload
-* user interaction
-* displaying results
-* triggering the OCR pipeline
-
----
-
-### ⚙️ config
-
-#### config.py
-
-Stores application settings and configuration values such as:
-
-* database paths
-* environment variables
-* application constants
+* uploading images
+* displaying inventory
+* managing user interactions
 
 ---
 
-### 🗄️ database
+### OCR Pipeline
 
-Database layer responsible for inventory persistence.
+Responsible for:
 
-#### connection.py
+* image preprocessing
+* OCR execution
+* text cleaning
+* invoice parsing
 
-Creates and manages database connections.
-
-#### schema.py
-
-Defines database structure and table schemas.
-
-#### operations.py
-
-Handles database operations:
-
-* loading inventory
-* updating quantities
-* saving processed records
+The OCR layer has been designed to be replaceable. Tesseract can be substituted with another OCR engine or an LLM-based document extraction pipeline without affecting the remaining application.
 
 ---
 
-### 🖼️ procesing_jpg
+### ETL
 
-Image processing and OCR layer.
+Transforms OCR output into structured inventory records.
 
-#### preprocess_ocr.py
+Responsibilities include:
 
-Prepares images for OCR by:
-
-* grayscale conversion
-* contrast enhancement
-* image cleanup
-
-#### extract_text_ocr.py
-
-Extracts raw text using OCR.
-
-The OCR layer is designed to be replaceable and can be upgraded to use LLM-based document extraction.
-
-#### text_modification.py
-
-Cleans OCR output by:
-
-* removing OCR artifacts
-* normalizing text
-* preparing text for parsing
+* extracting products
+* quantity normalization
+* duplicate merging
+* preparing inventory updates
 
 ---
 
-### 🔄 etl
+### Product Matching
 
-Responsible for transforming raw OCR results into structured inventory data.
+Maps extracted product names to the reference product database using fuzzy matching.
 
-#### pipeline.py
-
-Coordinates the complete processing workflow.
-
-#### products_etl_ocr.py
-
-Converts OCR output into structured product records.
-
-#### products_etl.py
-
-Performs additional transformations and inventory calculations.
+This improves OCR robustness when invoices contain spelling mistakes, formatting inconsistencies, or OCR artifacts.
 
 ---
 
-### 🎯 product_matching
+### Services
 
-Product name normalization and matching.
-
-#### correct_products_names.py
-
-Maintains the master list of valid products.
-
-#### fuzzy_match.py
-
-Uses fuzzy matching techniques to map OCR output to known product names.
-
-This layer improves OCR robustness when documents contain spelling errors or OCR artifacts.
+Contains business logic separating application behavior from database implementation.
 
 ---
 
-### 🎨 ui
+### Database
 
-#### sidebar.py
+Responsible for:
 
-Contains reusable Streamlit user interface components.
+* inventory persistence
+* reference product storage
+* user database
+* database schema initialization
+* inventory synchronization
 
----
-
-## 📈 Processing Workflow
-
-1. User uploads an invoice or order image.
-2. The image is preprocessed to improve OCR quality.
-3. OCR extracts raw text from the document.
-4. Text is cleaned and normalized.
-5. Product names are matched against the product catalog.
-6. Structured inventory data is generated.
-7. Database records are updated.
-8. Results are displayed in the user interface.
+SQLite is currently used as the storage engine but can be replaced with another relational database.
 
 ---
 
-## 🛠️ Technologies
+# 🛠 Technologies
 
 * Python
 * Streamlit
 * OpenCV
 * Tesseract OCR
 * Pandas
+* NumPy
 * SQLite
 * RapidFuzz
-* Pydantic
 
 ---
 
-## 🔮 ## 🔮 Possible Future Improvements
+# 🚀 Running the Project
 
+```bash
+git clone <repository>
+
+cd <repository>
+
+conda env create -f environment.yml
+
+conda activate <environment>
+
+streamlit run app.py
+```
+
+---
+
+# 🎯 What I Learned
+
+This project allowed me to gain practical experience with:
+
+* modular Python application architecture
+* OCR preprocessing techniques
+* image processing with OpenCV
+* ETL pipeline design
+* fuzzy string matching
+* SQLite database integration
+* separation of business logic from UI
+* Streamlit application development
+
+---
+
+# 🔮 Possible Future Improvements
+
+* PostgreSQL support
+* Docker deployment
+* REST API using FastAPI
 * User authentication and authorization
+* Inventory operation history
 * Audit logging
 * OCR confidence monitoring
+* Unit and integration tests
+* CI/CD pipeline
 * LLM-based document extraction
-* Multi-user inventory management
-* Advanced reporting and analytics
 
 ---
 
-## 🎥 Demo
+# 🎥 Demo
 
-A video presentation of the application can be found in the project portfolio.
+The project portfolio includes a demonstration presenting:
 
-The demo showcases:
+Part 3 (last):
+
+https://youtu.be/jb9vZLLzAJ4
 
 * image upload
 * OCR processing
 * product extraction
-* inventory updates
+* inventory synchronization
 * application workflow
-
-
-**Created 7.06.2026**
-
-<a href="https://youtu.be/GEt1dHeC6sQ" taget="_blank" class="md-button md-button--primary">Demo</a>
-
+* modular architecture
