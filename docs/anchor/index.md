@@ -114,8 +114,8 @@ Customer Matching       Text Cleaning
         ┌────────┴────────┐
         ▼                 ▼
  Inventory Update    Order Creation
-                          │
-                          ▼
+        │                 │
+        ▼                 ▼
                      Order Items
         └────────┬────────┘
                  ▼
