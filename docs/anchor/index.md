@@ -1,70 +1,33 @@
-# 📦 Inventory OCR Scanner
+# 📦 OCR Inventory Scanner
 
-A modular OCR-based inventory management system built with Python and Streamlit.
+A modular inventory management system based on OCR technology, built in Python and Streamlit.
 
-The application automatically extracts products and quantities from invoice or warehouse document images using Optical Character Recognition (OCR), transforms unstructured text into structured inventory data, matches recognized products against a reference catalog, and synchronizes warehouse stock levels.
+The application automatically extracts products and quantities from invoice images or warehouse documents using optical character recognition (OCR), converts unstructured text into structured inventory data, matches recognized products to a reference catalog, synchronizes inventory levels, and saves order history.
 
-The project was designed with a modular architecture so that individual components can be easily maintained, extended, or replaced.
+The project was designed based on a modular architecture, allowing individual components to be easily maintained, expanded, or replaced.
 
----
+--
 
-# 🚀 Project Overview
+# 🚀 Project Description
 
-The application automates inventory updates from photographed documents.
+The application automates inventory updates based on photographed documents.
 
-Instead of manually entering products into a warehouse system, the application performs the following steps:
+Instead of manually entering products into the inventory system, the application performs the following steps:
 
-* preprocesses uploaded images
-* extracts text using OCR
-* cleans and normalizes OCR output
-* identifies products and quantities
-* matches extracted names against a reference database using fuzzy matching
-* transforms extracted data into structured inventory records
-* updates inventory quantities stored in SQLite
-* presents the results through a Streamlit user interface
+* Preprocessing uploaded images
+* Text extraction using OCR
+* Cleansing and normalizing OCR results
+* Identifying products and quantities
+* Matching extracted names to a reference database using fuzzy matching
+* Transforming extracted data into structured inventory records
+* Updating inventory quantities stored in a SQLite database
+* Presenting results via the Streamlit user interface
 
-The architecture separates business logic, OCR processing, ETL, data persistence, and user interface into independent modules.
-
----
-
-# ✨ Features
-
-* OCR-based product extraction
-* Image preprocessing with OpenCV
-* Text extraction using Tesseract OCR
-* OCR text normalization and cleanup
-* Fuzzy product name matching using RapidFuzz
-* ETL pipeline for structured inventory data
-* Automatic inventory synchronization
-* SQLite-based persistence layer
-* Modular application architecture
-* Streamlit web interface
+The architecture separates business logic, OCR processing, ETL, data persistence, and the user interface into independent modules.
 
 ---
 
 # 🏗 Architecture
-
-```text
-                Streamlit UI
-                      │
-                      ▼
-            OCR Processing Pipeline
-                      │
-                      ▼
-          Text Cleaning & Parsing
-                      │
-                      ▼
-               ETL Processing
-                      │
-                      ▼
-           Product Name Matching
-                      │
-                      ▼
-            Inventory Service Layer
-                      │
-                      ▼
-               SQLite Database
-```
 
 Each layer is responsible for a single part of the application, making the project easier to maintain and extend.
 
@@ -128,74 +91,39 @@ Image Preprocessing
 OCR Text Extraction
       │
       ▼
-Text Cleaning
+Invoice Section Parsing
       │
-      ▼
-Invoice Parsing
-      │
-      ▼
-ETL Transformation
-      │
-      ▼
-Product Matching
-      │
-      ▼
-Inventory Update
-      │
-      ▼
-SQLite Database
-      │
-      ▼
-Streamlit Interface
+      ├─────────────────────┐
+      ▼                     ▼
+Customer Extraction     Product Line Extraction
+      │                     │
+      ▼                     ▼
+Customer Matching       Text Cleaning
+      │                     │
+      │                     ▼
+      │                Product Extraction
+      │                     │
+      │                     ▼
+      │                Product Matching
+      │                     │
+      └──────────┬──────────┘
+                 ▼
+          ETL Transformation
+                 │
+        ┌────────┴────────┐
+        ▼                 ▼
+ Inventory Update    Order Creation
+                          │
+                          ▼
+                     Order Items
+        └────────┬────────┘
+                 ▼
+          SQLite Database
+                 │
+                 ▼
+        Streamlit Interface
 ```
 
----
-
-# 📦 Module Overview
-
-### UI
-
-Provides the Streamlit user interface responsible for:
-
-* uploading images
-* displaying inventory
-* managing user interactions
-
----
-
-### OCR Pipeline
-
-Responsible for:
-
-* image preprocessing
-* OCR execution
-* text cleaning
-* invoice parsing
-
-The OCR layer has been designed to be replaceable. Tesseract can be substituted with another OCR engine or an LLM-based document extraction pipeline without affecting the remaining application.
-
----
-
-### ETL
-
-Transforms OCR output into structured inventory records.
-
-Responsibilities include:
-
-* extracting products
-* quantity normalization
-* duplicate merging
-* preparing inventory updates
-
----
-
-### Product Matching
-
-Maps extracted product names to the reference product database using fuzzy matching.
-
-This improves OCR robustness when invoices contain spelling mistakes, formatting inconsistencies, or OCR artifacts.
-
----
 
 ### Services
 
@@ -230,22 +158,6 @@ SQLite is currently used as the storage engine but can be replaced with another 
 
 ---
 
-# 🚀 Running the Project
-
-```bash
-git clone <repository>
-
-cd <repository>
-
-conda env create -f environment.yml
-
-conda activate <environment>
-
-streamlit run app.py
-```
-
----
-
 # 🎯 What I Learned
 
 This project allowed me to gain practical experience with:
@@ -257,7 +169,8 @@ This project allowed me to gain practical experience with:
 * fuzzy string matching
 * SQLite database integration
 * separation of business logic from UI
-* Streamlit application development
+* Database preview using LLM
+* Inventory operation history
 
 ---
 
@@ -267,26 +180,11 @@ This project allowed me to gain practical experience with:
 * Docker deployment
 * REST API using FastAPI
 * User authentication and authorization
-* Inventory operation history
 * Audit logging
 * OCR confidence monitoring
 * Unit and integration tests
 * CI/CD pipeline
-* LLM-based document extraction
 
 ---
 
-# 🎥 Demo
-
-The project portfolio includes a demonstration presenting:
-
-Part 3 (last):
-
-https://youtu.be/jb9vZLLzAJ4
-
-* image upload
-* OCR processing
-* product extraction
-* inventory synchronization
-* application workflow
-* modular architecture
+# 🎥 [Demo](https://youtu.be/jb9vZLLzAJ4)  ← Part 4 (last)
