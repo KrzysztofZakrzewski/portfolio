@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#inventory-ocr-scanner" class="md-skip">
+        <a href="#ocr-inventory-scanner" class="md-skip">
           Skip to content
         </a>
       
@@ -909,61 +909,27 @@
   
 
 
-<h1 id="inventory-ocr-scanner">📦 Inventory OCR Scanner</h1>
-<p>A modular OCR-based inventory management system built with Python and Streamlit.</p>
-<p>The application automatically extracts products and quantities from invoice or warehouse document images using Optical Character Recognition (OCR), transforms unstructured text into structured inventory data, matches recognized products against a reference catalog, and synchronizes warehouse stock levels.</p>
-<p>The project was designed with a modular architecture so that individual components can be easily maintained, extended, or replaced.</p>
-<hr />
-<h1 id="project-overview">🚀 Project Overview</h1>
-<p>The application automates inventory updates from photographed documents.</p>
-<p>Instead of manually entering products into a warehouse system, the application performs the following steps:</p>
+<h1 id="ocr-inventory-scanner">📦 OCR Inventory Scanner</h1>
+<p>A modular inventory management system based on OCR technology, built in Python and Streamlit.</p>
+<p>The application automatically extracts products and quantities from invoice images or warehouse documents using optical character recognition (OCR), converts unstructured text into structured inventory data, matches recognized products to a reference catalog, synchronizes inventory levels, and saves order history.</p>
+<p>The project was designed based on a modular architecture, allowing individual components to be easily maintained, expanded, or replaced.</p>
+<p>--</p>
+<h1 id="project-description">🚀 Project Description</h1>
+<p>The application automates inventory updates based on photographed documents.</p>
+<p>Instead of manually entering products into the inventory system, the application performs the following steps:</p>
 <ul>
-<li>preprocesses uploaded images</li>
-<li>extracts text using OCR</li>
-<li>cleans and normalizes OCR output</li>
-<li>identifies products and quantities</li>
-<li>matches extracted names against a reference database using fuzzy matching</li>
-<li>transforms extracted data into structured inventory records</li>
-<li>updates inventory quantities stored in SQLite</li>
-<li>presents the results through a Streamlit user interface</li>
+<li>Preprocessing uploaded images</li>
+<li>Text extraction using OCR</li>
+<li>Cleansing and normalizing OCR results</li>
+<li>Identifying products and quantities</li>
+<li>Matching extracted names to a reference database using fuzzy matching</li>
+<li>Transforming extracted data into structured inventory records</li>
+<li>Updating inventory quantities stored in a SQLite database</li>
+<li>Presenting results via the Streamlit user interface</li>
 </ul>
-<p>The architecture separates business logic, OCR processing, ETL, data persistence, and user interface into independent modules.</p>
-<hr />
-<h1 id="features">✨ Features</h1>
-<ul>
-<li>OCR-based product extraction</li>
-<li>Image preprocessing with OpenCV</li>
-<li>Text extraction using Tesseract OCR</li>
-<li>OCR text normalization and cleanup</li>
-<li>Fuzzy product name matching using RapidFuzz</li>
-<li>ETL pipeline for structured inventory data</li>
-<li>Automatic inventory synchronization</li>
-<li>SQLite-based persistence layer</li>
-<li>Modular application architecture</li>
-<li>Streamlit web interface</li>
-</ul>
+<p>The architecture separates business logic, OCR processing, ETL, data persistence, and the user interface into independent modules.</p>
 <hr />
 <h1 id="architecture">🏗 Architecture</h1>
-<pre><code class="language-text">                Streamlit UI
-                      │
-                      ▼
-            OCR Processing Pipeline
-                      │
-                      ▼
-          Text Cleaning &amp; Parsing
-                      │
-                      ▼
-               ETL Processing
-                      │
-                      ▼
-           Product Name Matching
-                      │
-                      ▼
-            Inventory Service Layer
-                      │
-                      ▼
-               SQLite Database
-</code></pre>
 <p>Each layer is responsible for a single part of the application, making the project easier to maintain and extend.</p>
 <hr />
 <h1 id="project-structure">📂 Project Structure</h1>
@@ -1018,60 +984,38 @@ Image Preprocessing
 OCR Text Extraction
       │
       ▼
-Text Cleaning
+Invoice Section Parsing
       │
-      ▼
-Invoice Parsing
-      │
-      ▼
-ETL Transformation
-      │
-      ▼
-Product Matching
-      │
-      ▼
-Inventory Update
-      │
-      ▼
-SQLite Database
-      │
-      ▼
-Streamlit Interface
+      ├─────────────────────┐
+      ▼                     ▼
+Customer Extraction     Product Line Extraction
+      │                     │
+      ▼                     ▼
+Customer Matching       Text Cleaning
+      │                     │
+      │                     ▼
+      │                Product Extraction
+      │                     │
+      │                     ▼
+      │                Product Matching
+      │                     │
+      └──────────┬──────────┘
+                 ▼
+          ETL Transformation
+                 │
+        ┌────────┴────────┐
+        ▼                 ▼
+ Inventory Update    Order Creation
+                          │
+                          ▼
+                     Order Items
+        └────────┬────────┘
+                 ▼
+          SQLite Database
+                 │
+                 ▼
+        Streamlit Interface
 </code></pre>
-<hr />
-<h1 id="module-overview">📦 Module Overview</h1>
-<h3 id="ui">UI</h3>
-<p>Provides the Streamlit user interface responsible for:</p>
-<ul>
-<li>uploading images</li>
-<li>displaying inventory</li>
-<li>managing user interactions</li>
-</ul>
-<hr />
-<h3 id="ocr-pipeline">OCR Pipeline</h3>
-<p>Responsible for:</p>
-<ul>
-<li>image preprocessing</li>
-<li>OCR execution</li>
-<li>text cleaning</li>
-<li>invoice parsing</li>
-</ul>
-<p>The OCR layer has been designed to be replaceable. Tesseract can be substituted with another OCR engine or an LLM-based document extraction pipeline without affecting the remaining application.</p>
-<hr />
-<h3 id="etl">ETL</h3>
-<p>Transforms OCR output into structured inventory records.</p>
-<p>Responsibilities include:</p>
-<ul>
-<li>extracting products</li>
-<li>quantity normalization</li>
-<li>duplicate merging</li>
-<li>preparing inventory updates</li>
-</ul>
-<hr />
-<h3 id="product-matching">Product Matching</h3>
-<p>Maps extracted product names to the reference product database using fuzzy matching.</p>
-<p>This improves OCR robustness when invoices contain spelling mistakes, formatting inconsistencies, or OCR artifacts.</p>
-<hr />
 <h3 id="services">Services</h3>
 <p>Contains business logic separating application behavior from database implementation.</p>
 <hr />
@@ -1098,18 +1042,6 @@ Streamlit Interface
 <li>RapidFuzz</li>
 </ul>
 <hr />
-<h1 id="running-the-project">🚀 Running the Project</h1>
-<pre><code class="language-bash">git clone &lt;repository&gt;
-
-cd &lt;repository&gt;
-
-conda env create -f environment.yml
-
-conda activate &lt;environment&gt;
-
-streamlit run app.py
-</code></pre>
-<hr />
 <h1 id="what-i-learned">🎯 What I Learned</h1>
 <p>This project allowed me to gain practical experience with:</p>
 <ul>
@@ -1120,7 +1052,8 @@ streamlit run app.py
 <li>fuzzy string matching</li>
 <li>SQLite database integration</li>
 <li>separation of business logic from UI</li>
-<li>Streamlit application development</li>
+<li>Database preview using LLM</li>
+<li>Inventory operation history</li>
 </ul>
 <hr />
 <h1 id="possible-future-improvements">🔮 Possible Future Improvements</h1>
@@ -1129,26 +1062,13 @@ streamlit run app.py
 <li>Docker deployment</li>
 <li>REST API using FastAPI</li>
 <li>User authentication and authorization</li>
-<li>Inventory operation history</li>
 <li>Audit logging</li>
 <li>OCR confidence monitoring</li>
 <li>Unit and integration tests</li>
 <li>CI/CD pipeline</li>
-<li>LLM-based document extraction</li>
 </ul>
 <hr />
-<h1 id="demo">🎥 Demo</h1>
-<p>The project portfolio includes a demonstration presenting:</p>
-<p>Part 3 (last):</p>
-<p>https://youtu.be/jb9vZLLzAJ4</p>
-<ul>
-<li>image upload</li>
-<li>OCR processing</li>
-<li>product extraction</li>
-<li>inventory synchronization</li>
-<li>application workflow</li>
-<li>modular architecture</li>
-</ul>
+<h1 id="demo-part-4-last">🎥 <a href="https://youtu.be/jb9vZLLzAJ4">Demo</a>  ← Part 4 (last)</h1>
 
 
 
