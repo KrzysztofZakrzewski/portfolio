@@ -38,43 +38,44 @@ Each layer is responsible for a single part of the application, making the proje
 ```text
 .
 ├── app.py
-├── README.md
-│
 └── src
     ├── auth
     │   ├── auth.py
     │   ├── password.py
     │   └── session.py
-    │
     ├── config
     │   └── config.py
-    │
+    ├── customer_matching
+    │   └── fuzzy_match_customer.py
     ├── database
+    │   ├── baza_probna.db
     │   ├── connection.py
+    │   ├── inventory.db
     │   ├── inventory_operations.py
     │   ├── inventory_schema.py
+    │   ├── reference.db
+    │   ├── reference_operations.py
     │   ├── reference_schema.py
+    │   ├── users.db
     │   └── users_schema.py
-    │
     ├── etl
     │   ├── etl_pipeline.py
     │   └── ocr_results_to_products_dataframe.py
-    │
     ├── procesing_jpg
     │   ├── extract_text_ocr.py
     │   ├── invoice_ocr_pipeline.py
     │   ├── preprocess_ocr.py
     │   └── text_modification.py
-    │
     ├── product_matching
     │   └── fuzzy_match.py
-    │
     ├── services
+    │   ├── analytics_service.py
     │   └── inventory_service.py
-    │
     └── ui
         ├── sidebar.py
         └── upload.py
+
+11 directories, 27 files
 ```
 
 ---
